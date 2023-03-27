@@ -10,6 +10,8 @@ This is a location tracking system, each individual will receive an ID and its p
 
 ## Testing
 
+If you don't use `--build` it will not identify your changes.
+
 ```bash
 docker-compose stop && docker-compose rm -f && docker-compose up --build -d
 ```

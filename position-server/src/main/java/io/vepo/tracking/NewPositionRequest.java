@@ -1,5 +1,7 @@
 package io.vepo.tracking;
 
-public record NewPositionRequest(String ownerId, GeoLocation location) {
+import java.time.LocalDateTime;
+
+public record NewPositionRequest(String ownerId, LocalDateTime startedAt, GeoLocation location) {
     
 }
