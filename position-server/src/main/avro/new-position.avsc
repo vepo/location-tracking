@@ -1,0 +1,28 @@
+{
+    "namespace": "io.vepo.location.tracking.position",
+    "type": "record",
+    "name": "NewPosition",
+    "fields": [
+        {
+            "name": "ownerId",
+            "type": "string"
+        },
+        {
+            "name": "location",
+            "type": {
+                "type": "record",
+                "name": "GeoLocation",
+                "fields": [
+                    {
+                        "name": "lat",
+                        "type": "double"
+                    },
+                    {
+                        "name": "lon",
+                        "type": "double"
+                    }
+                ]
+            }
+        }
+    ]
+}
