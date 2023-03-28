@@ -18,8 +18,21 @@ services:
       context: ./position-server
     ports:
       - 8080:8080
+      - 5005:5005
     volumes:
       - ./position-server:/app
+      - "${HOME}/.m2:/root/.m2"
+    depends_on:
+      - kafka
+      - schema-registry
+  neighbourhood-resolver:
+    build:
+      context: ./neighbourhood-resolver
+    ports:
+      - 8082:8080
+      - 5006:5005
+    volumes:
+      - ./neighbourhood-resolver:/app
       - "${HOME}/.m2:/root/.m2"
     depends_on:
       - kafka

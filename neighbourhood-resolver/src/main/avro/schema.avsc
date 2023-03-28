@@ -1,0 +1,268 @@
+{
+    "namespace": "io.vepo.location.tracking.position",
+    "type": "record",
+    "name": "EnrichmentResult",
+    "fields": [
+        {
+            "name": "input",
+            "type": {
+                "type": "record",
+                "name": "NewPosition",
+                "fields": [
+                    {
+                        "name": "ownerId",
+                        "type": "string"
+                    },
+                    {
+                        "name": "location",
+                        "type": {
+                            "type": "record",
+                            "name": "GeoLocation",
+                            "fields": [
+                                {
+                                    "name": "lat",
+                                    "type": "double"
+                                },
+                                {
+                                    "name": "lon",
+                                    "type": "double"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "output",
+            "type": [
+                "null",
+                {
+                    "type": "record",
+                    "name": "PositionWithNeighbourhood",
+                    "fields": [
+                        {
+                            "name": "ownerId",
+                            "type": "string"
+                        },
+                        {
+                            "name": "location",
+                            "type": "io.vepo.location.tracking.position.GeoLocation"
+                        },
+                        {
+                            "name": "neighbourhood",
+                            "type": {
+                                "type": "record",
+                                "name": "Neighbourhood",
+                                "fields": [
+                                    {
+                                        "name": "place_id",
+                                        "type": "long"
+                                    },
+                                    {
+                                        "name": "licence",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "name": "powered_by",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "name": "osm_type",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "name": "osm_id",
+                                        "type": "long"
+                                    },
+                                    {
+                                        "name": "lat",
+                                        "type": "double"
+                                    },
+                                    {
+                                        "name": "lon",
+                                        "type": "double"
+                                    },
+                                    {
+                                        "name": "display_name",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "name": "address",
+                                        "type": {
+                                            "type": "record",
+                                            "name": "Address",
+                                            "fields": [
+                                                {
+                                                    "name": "amenity",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "junction",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "manMade",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "place",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "railway",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "tourism",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "office",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "historic",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "shop",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "building",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "leisure",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "houseNumber",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "road",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "highway",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "neighbourhood",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "suburb",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "city",
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "name": "county",
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "name": "cityDistrict",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "postcode",
+                                                    "type": [
+                                                        "null",
+                                                        "string"
+                                                    ]
+                                                },
+                                                {
+                                                    "name": "country",
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "name": "country_code",
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "boundingbox",
+                                        "type": {
+                                            "type": "array",
+                                            "items": "double"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "default": null
+        },
+        {
+            "name": "status",
+            "type": {
+                "type": "enum",
+                "name": "Status",
+                "symbols": [
+                    "SUCCESS",
+                    "FAIL"
+                ]
+            }
+        }
+    ]
+}
