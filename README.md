@@ -8,6 +8,10 @@ This is a location tracking system, each individual will receive an ID and its p
 
    This is a HTTP server that will receive a position from a individual.
 
+2. Neighbourhood Resolver
+
+   This is a Kafka Stream projects that enrich the data with neighbourhood information
+
 ## Testing
 
 If you don't use `--build` it will not identify your changes.
